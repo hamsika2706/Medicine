@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #8b5cf6;
+    --primary-hover: #7c3aed;
+    --danger-color: #ec4899;
+    --danger-hover: #db2777;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --bg-color: #f5f3ff;
+    --white: #ffffff;
+    --border-color: #ddd6fe;
+    --card-bg: #ffffff;
+    --input-focus: rgba(139, 92, 246, 0.1);
+    --gradient-start: #8b5cf6;
+    --gradient-end: #ec4899;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/039/858/916/non_2x/ai-generated-background-of-medical-pills-in-pink-and-purple-colors-delicate-shades-macrography-horizontal-wallpaper-format-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the image stays in place when scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Login Form Styles */
+.login-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--input-focus);
+    background-color: var(--white);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--white);
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(139, 92, 246, 0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--danger-color), var(--danger-hover));
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(236, 72, 153, 0.2);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#userEmail {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Reminder List Styles */
+.reminder-list {
+    margin-top: 1rem;
+}
+
+.reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.reminder-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+}
+
+.reminder-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.reminder-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.delete-btn:hover {
+    color: var(--danger-hover);
+    background-color: rgba(236, 72, 153, 0.1);
+}
+.hidden {
+    display: none;
+  }
+  

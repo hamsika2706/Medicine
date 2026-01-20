@@ -1,0 +1,35 @@
+/* Apply a background image */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/039/858/916/non_2x/ai-generated-background-of-medical-pills-in-pink-and-purple-colors-delicate-shades-macrography-horizontal-wallpaper-format-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a semi-transparent overlay for better contrast */
+.container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.85); /* Light opacity for readability */
+    border-radius: 1rem;
+    backdrop-filter: blur(10px); /* Soft blur effect */
+}
+
+/* Ensure content is readable over the background */
+.card, header {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+/* Adjust text for readability */
+h1, h2 {
+    color: #333;
+}

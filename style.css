@@ -1,0 +1,277 @@
+/* Reset default margin and font with improved reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --primary-color: #6a1b9a;
+    --primary-dark: #4a148c;
+    --primary-light: #9c4dcc;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body, html {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    height: 100%;
+    width: 100%;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* Improved Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    padding: 0.75rem 3rem;
+    box-shadow: var(--shadow-md);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+    width: 0;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--primary-dark);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+}
+
+/* Mobile menu button (hidden by default) */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Enhanced Hero Section */
+/* Modified Hero Section with centered text */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                    url('https://previews.123rf.com/images/neirfy/neirfy1908/neirfy190800352/129227476-colorful-pills-with-glass-of-clear-water-over-blue-background-top-view-frame-medical-pharmacy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed from flex-start to center */
+    padding: 0 2rem; /* Reduced padding for better mobile */
+    color: var(--white);
+    position: relative;
+    text-align: center; /* Added to center all text */
+}
+
+.hero-content {
+    max-width: 600px;
+    color: #000;
+    font-size: larger;
+    animation: fadeInUp 1s ease;
+    margin: 0 auto; /* Ensures content stays centered */
+    padding: 0 1rem; /* Added some padding for better spacing */
+}
+
+.hero .underline {
+    margin: 1.5rem auto; /* Changed to auto for horizontal centering */
+}
+
+/* Button container for better centering of multiple buttons */
+.btn-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to stack on small screens */
+}
+
+/* Adjust button margins */
+.btn {
+    margin: 0; /* Remove any default margins */
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    
+    .hero {
+        padding: 0 3rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: var(--transition);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .hero {
+        padding: 0 1.5rem;
+        background-attachment: scroll;
+    }
+    
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+.about-section {
+    padding: 80px 50px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-container {
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .about-content {
+    flex: 2;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .about-underline {
+    width: 60px;
+    height: 4px;
+    background: #6a1b9a;
+    margin: 0 auto 20px;
+    border: none;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-content {
+      padding: 30px 20px;
+    }
+  
+    .about-content h2 {
+      font-size: 28px;
+    }
+  
+    .about-content p {
+      font-size: 16px;
+    }
+  }
+  

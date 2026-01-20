@@ -1,0 +1,127 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/039/858/916/non_2x/ai-generated-background-of-medical-pills-in-pink-and-purple-colors-delicate-shades-macrography-horizontal-wallpaper-format-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  /* Header */
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:active {
+    background-color: #388e3c;
+  }
+  
+  /* Link Styles */
+  p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    input {
+      padding: 10px 15px;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+  
